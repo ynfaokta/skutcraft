@@ -1,0 +1,247 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: url('../img2/bg.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+.whitelistContainer {
+    margin: 0 auto;
+    width: 900px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100%;
+    height: 180px;
+    text-align: center;
+}
+
+.logo img {
+    height: 100%;
+}
+
+.whitelistBody {
+    background: rgba(0, 0, 0, .7);
+    padding: 25px;
+    width: 100%;
+    color: white;
+}
+
+.whitelistBody input[type="text"],
+.whitelistBody input[type="date"],
+.whitelistBody input[type="number"],
+.whitelistBody textarea {
+    margin: 10px 0;
+    width: 100%;
+    display: block;
+    border: none;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 5px;
+}
+
+.whitelistBody input[type="submit"] {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.3em;
+    background: rgba(1, 196, 19, .7);
+    color: white;
+    cursor: pointer;
+}
+
+.whitelistBody input[type="submit"]:hover {
+    background: #089e17;
+}
+
+.whitelistBody label {
+    display: block;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #01c413;
+}
+
+.whitelistSection {
+    padding: 20px 30px;
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+}
+
+.description {
+    width: 100%;
+    color: #dc3545;
+
+    margin: 30px 0;
+}
+
+.description p {
+    text-shadow: 0 0px 3px #000;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.green {
+    color: #01c413;
+}
+
+.radioContainer span {
+    margin-right: 5px;
+}
+
+.whitelistBody input[type="radio"] {
+    margin-right: 50px;
+}
+
+.radioContainer {
+    padding: 15px;
+}
+
+.twoRows {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.twoRows input[type="number"],
+.twoRows input[type="text"] {
+    width: 40%;
+}
+
+.twoRows label {
+    width: 40%;
+}
+
+.lengthCounter {
+    display: block;
+    text-align: right;
+    font-size: 0.8em;
+    color: gray;
+}
+
+.error {
+    width: 30%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 2px solid red;
+    color: white;
+    position: fixed;
+    top: 30px;
+    right: 10px;
+    z-index: 1;
+    animation: error 4s ease-in-out both;
+}
+
+@keyframes error {
+    0% {
+        opacity: 0;
+        transform: translate(0);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translate(1);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.logout {
+    padding: 10px;
+    border-radius: 50px;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    background: #01c413;
+    text-decoration: none;
+    color: white;
+}
+
+.logout:hover {
+    background: #089e17;
+}
+
+.btnGroup {
+    position: fixed;
+    top: 10px;
+    left: 15px;
+}
+
+.tab,
+a {
+    text-decoration: none;
+    border: none;
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+    background: rgba(20, 20, 20, .85);
+}
+
+.activeTab {
+    background: #01c413;
+}
+
+.tab:hover,
+a:hover {
+    background: #089e17;
+    cursor: pointer;
+}
+
+.unActive {
+    display: none;
+}
+
+@media screen and (max-width: 650px) {
+    .btnGroup {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        width: 100%;
+    }
+
+    .logout {
+        top: 130px;
+        position: absolute;
+    }
+
+    .logo img {
+        display: none;
+    }
+
+    .whitelistContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .unActive {
+        display: none;
+    }
+
+    .tab {
+        cursor: pointer;
+        margin: 10px 5px;
+    }
+}
